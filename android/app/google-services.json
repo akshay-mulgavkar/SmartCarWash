@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "371506639398",
+    "project_id": "smartcarwash-2d489",
+    "storage_bucket": "smartcarwash-2d489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371506639398:android:4295ec810e6cfcaa552ce7",
+        "android_client_info": {
+          "package_name": "com.smartcarwash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371506639398-4jpdg3e3mc70j15ast9k073r22aam9dj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartcarwash",
+            "certificate_hash": "87611b461708386c551dfd1daa021abe916dc206"
+          }
+        },
+        {
+          "client_id": "371506639398-r73jgro0g7mpk9i5rbpu1ihnr845705u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNbqmK8pbTdKKuqSMuM_J4mzxxLRRhgTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371506639398-r73jgro0g7mpk9i5rbpu1ihnr845705u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
