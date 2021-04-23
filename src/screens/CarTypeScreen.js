@@ -1,9 +1,9 @@
 //import React from 'react'
-import Background from "../components/Background";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
-import Paragraph from "../components/Paragraph";
-import Button from "../components/Button";
+import Background from '../components/Background'
+import Logo from '../components/Logo'
+import Header from '../components/Header'
+import Paragraph from '../components/Paragraph'
+import Button from '../components/Button'
 import {
   FlatList,
   StyleSheet,
@@ -13,9 +13,9 @@ import {
   TouchableHighlight,
   SafeAreaView,
   StatusBar,
-} from "react-native";
-import BackButton from "../components/BackButton";
-import React, {useState} from "react";
+} from 'react-native'
+import BackButton from '../components/BackButton'
+import React, { useState } from 'react'
 
 {
   /*const AreaScreen = ({ navigation }) => (
@@ -36,69 +36,71 @@ import React, {useState} from "react";
     </Button>
   </Background>
 )
-
     export default AreaScreen*/
 }
 const DATA = [
   {
-    id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "SUV",
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'SUV',
   },
   {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Sedan",
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Sedan',
   },
   {
-    id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "Hatchback",
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Hatchback',
   },
-];
+]
 
-const Item = ({item, onPress, style}) => (
+const Item = ({ item, onPress, style }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
     <Text style={styles.title}>{item.title}</Text>
   </TouchableOpacity>
-);
+)
 
-const CarTypeScreen = ({navigation}) => {
-  const [selectedId, setSelectedId] = useState(null);
+const CarTypeScreen = ({ navigation }) => {
+  const [selectedId, setSelectedId] = useState(null)
 
-  const renderItem = ({item}) => {
-    const backgroundColor = item.id === selectedId ? "lightgray" : "white";
+  const renderItem = ({ item }) => {
+    const backgroundColor = item.id === selectedId ? 'lightgray' : 'white'
 
     return (
       <Item
         item={item}
         onPress={() =>
-          navigation.navigate("MyDrawer", {
-            screen: "Home",
-            params: {selectedCarType: item},
+          navigation.navigate('MyDrawer', {
+            screen: 'Home',
+            params: { selectedCarType: item },
           })
         }
-        style={{backgroundColor}}
+        style={{ backgroundColor }}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View>
       <View style={styles.container1}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("MyDrawer")}>
+          onPress={() => navigation.navigate('MyDrawer')}
+        >
           <Text
             style={{
               fontSize: 20,
-            }}>
-            {"X"}
+            }}
+          >
+            {'X'}
           </Text>
         </TouchableOpacity>
         <Text
           style={{
-            textAlignVertical: "center",
-            textAlign: "center",
+            textAlignVertical: 'center',
+            textAlign: 'center',
             fontSize: 20,
-          }}>
+          }}
+        >
           Select Car Type
         </Text>
       </View>
@@ -111,8 +113,8 @@ const CarTypeScreen = ({navigation}) => {
         />
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     marginVertical: 4,
     marginHorizontal: 16,
-    alignItems: "center",
+    alignItems: 'center',
   },
   title: {
     fontSize: 15,
@@ -140,6 +142,6 @@ const styles = StyleSheet.create({
   button: {
     paddingHorizontal: 30,
   },
-});
+})
 
-export default CarTypeScreen;
+export default CarTypeScreen
